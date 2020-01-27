@@ -1,104 +1,49 @@
+<?php
+require "db.php";
+session_start();
+if(isset($_SESSION['admin'])){
+    header("location:main.php");
+    exit();
+}
+?>
 <html>
-    <head>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <style>
-     body{
-        font-family:sans-serif;
-        text-decoration-color:darkslateblue;
-    }
-    a
-     {
-         text-decoration:none;       
-      }
-            a:hover{
-                color:aqua;
-            }
-            
-        </style>
-    </head>
-    <body>
- 
-   <div class="w3-padding w3-black">
-       <a class="w3-xlarge w3-text-yellow" href="index.php">DASHBOARD</a></div>
-         <div class="w3-row">
-             <div class="w3-quarter">
-    <div class="w3-sidebar w3-indigo w3-text-white w3-bar-block">
-        
-  <p class="w3-bar-item w3-pink w3-text-white w3-xlarge">Menu</p>
- <b><a href="#" class="w3-bar-item w3-button w3-hover-yellow">Product List</a>
-  <a href="#" class="w3-bar-item w3-button  w3-hover-yellow">Views</a>
-  <a href="#" class="w3-bar-item w3-button  w3-hover-yellow">Demand Product</a>
-<a href="#" class="w3-bar-item w3-button   w3-hover-yellow">Customer Account</a>
-     <a href="#" class="w3-bar-item w3-button w3-hover-yellow">Cart</a></b>
-</div>
- </div>
-        <div class="w3-container w3-right">
-           
- <p class="w3-tag w3-text-red w3-yellow w3-padding"><b>CHEMISTRY</b></p></br>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>index dashboard</title>
+    <style>
+        body {
 
-  <p class="w3-grey">
- Copper Nitrate<br>
- Chlorine Powder<br>
-Glacial Acetic Acid<br>
- Nitric Acid<br>
-Hydrochloric Acid<br>
- Copper Chloride<br>
- China Dish<br>
- Bioling Tube<br>
-BLow Pipe<br>
-Conical Flask<br>
- Charcoal Borer<br>
-Funnel<br>
-Glass beaker<br>
-Test Tube<br>
-Pippete<br>
-         Platinum Wire<br></p>
-        </div>
-     
-    <div class="w3-container w3-right">
-         <p class="w3-tag w3-text-red w3-yellow w3-padding "><b>Physics</b></p></br>
-    <p class="w3-grey">
-PN-Junction<br>
-Potentiometer<br>
-Rheosat<br>
- Sonometer<br>
-Spring Balance<br>
-Stand Filter Funnel<br>
-Voltmeter<br>
-Wire Guage<br>
-Tripod Stand<br>
-Vernier Califer<br>
-Volumentric Flask<br>
-<Resonance Tube<br>
-        </p>
-</div>
-<div class="w3-container w3-right">
-<p class=" w3-tag w3-text-red w3-yellow w3-padding"><b>Biology</b></p><br>
- <p class=" w3-grey">
-Microscope<br>
-Filter Paper<br>
-Cover Glass<br>
-Bursen Burner<br>
-Slides<br
-Rubber Tube<br>
-Petri Dish<br>
- Corked Tube<br>
- Glycerine<br>
-    Ethanol<br>
-Measuring Cylinder<br>
-    Water Mensis<br><br>  
-  </p>       
-</div>        
-        
-     
-    
-    
-    
-    
-    
-    
-    </div>
-    
-    </body>
-</html>
+            text-decoration-color: darkslateblue;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+       <div class="w3-row">
+           <div class="w3-third w3-padding"></div>
+           <div class="w3-third w3-padding">
+               <div class="w3-card w3-padding ">
+                    <h1 class="w3-text-pink w3-center">Admin Login</h1>
+                    <form action="checkAdmin.php" method="post">
+                        <label for="" class="w3-text-indigo  w3-padding">Username : </label><br>
+                        <input class="w3-panel w3-padding w3-text-blue" type="text" name="uname"><br>
+                        <label for="" class="w3-text-indigo  w3-padding">Password : </label><br>
+                        <input type="password" name="pass" class="w3-panel w3-padding w3-text-blue"><br><br>
+                        <input type="submit" name="login" value="Login"class="w3-text-white w3-round-large w3-blue w3-button w3-hover-red"><br>
+                    </form>
+               </div>
+           </div>
+           <div class="w3-third w3-padding"></div>
+       </div>
+</body>
+</html> 

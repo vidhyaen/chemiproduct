@@ -33,6 +33,7 @@ if (isset($_POST['login'])) {
 					$_SESSION['email'] = $row['email'];
 					$_SESSION['id'] = $row['id'];
 					$_SESSION['mno'] = $row['mno'];
+					$_SESSION['add'] = $row['address'];
                header("Location:main.php");
 					
 				exit();
@@ -43,7 +44,7 @@ if (isset($_POST['login'])) {
 				}
 			}
 			else{
-				header("Location:index.php?error=nouser");
+				header("Location:index.php?error=nouser&email");
 			exit();
 			}
 		}
