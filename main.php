@@ -30,7 +30,7 @@ $res3 = mysqli_query($con, $sql3);
     <title>main</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="w3.css">
 
     <script src="https://kit.fontawesome.com/c330d3c861.js" crossorigin="anonymous"></script>
 
@@ -105,7 +105,7 @@ $res3 = mysqli_query($con, $sql3);
         ?>
             <div class="w3-quarter w3-padding w3-center">
                 <div class="w3-panel w3-padding w3-card-4">
-                    <h4 class="w3-text-red w3-padding w3-center w3-black" title="<?php echo $rows['pdes']; ?>"><?php echo $rows['pname']; ?></h4>
+                    <h4 class="w3-text-red w3-padding w3-center w3-black" title="<?php echo $rows['pname']; ?>"><?php echo $rows['pname']; ?></h4>
                     <a href="detail.php?id=<?php echo $rows['id']; ?>"><img class="w3-padding" src="img/<?php echo $rows['pimg']; ?>"></a>
 
                 </div>
@@ -123,7 +123,7 @@ $res3 = mysqli_query($con, $sql3);
         ?>
             <div class="w3-quarter w3-padding w3-center">
                 <div class="w3-panel w3-padding w3-card-4">
-                    <h4 class="w3-text-red w3-padding w3-center w3-black" title="<?php echo $rows['pdes']; ?>"><?php echo $rows['pname']; ?></h4>
+                    <h4 class="w3-text-red w3-padding w3-center w3-black" title="<?php echo $rows['pname']; ?>"><?php echo $rows['pname']; ?></h4>
                     <a href="detail.php?id=<?php echo $rows['id']; ?>"><img class="w3-padding" src="img/<?php echo $rows['pimg']; ?>"></a>
 
 
@@ -142,7 +142,7 @@ $res3 = mysqli_query($con, $sql3);
         ?>
             <div class="w3-quarter w3-padding w3-center">
                 <div class="w3-panel w3-padding w3-card-4">
-                    <h4 class="w3-text-red w3-padding w3-center w3-black" title="<?php echo $rows['pdes']; ?>"><?php echo $rows['pname']; ?></h4>
+                    <h4 class="w3-text-red w3-padding w3-center w3-black" title="<?php echo $rows['pname']; ?>"><?php echo $rows['pname']; ?></h4>
                     <a href="detail.php?id=<?php echo $rows['id']; ?>"><img class="w3-padding" src="img/<?php echo $rows['pimg']; ?>"></a>
 
                 </div>
